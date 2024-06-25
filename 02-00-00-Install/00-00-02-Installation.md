@@ -38,32 +38,7 @@ Installation need access to below repo.
 
 ## Installation
 
-The Energy Monitor installer is delivered as tarball which included below package:
-
-- doxygen-{version}.x86_64.rpm
-- energy-monitor-nacoma-{version}.x86_64.rpm
-- energy-monitor-release-{version}.x86_64.rpm
-- energy-monitor-testthis-{version}.x86_64.rpm
-- epel-release-latest-8.noarch.rpm
-- lmd-{version}.x86_64.rpm
-- merlin-{version}.x86_64.rpm
-- monitor_api-{version}.x86_64.rpm
-- monitor-geomap-{version}.noarch.rpm
-- monitoring-plugins-{version}.x86_64.rpm
-- monitor-ninja-{version}.x86_64.rpm
-- monitor-ninja-monitoring-{version}.x86_64.rpm
-- naemon-core-{version}.x86_64.rpm
-- naemon-livestatus-{version}.x86_64.rpm
-- nagios-bpi-{version}.noarch.rpm
-- notify-{version}.x86_64.rpm
-- nrpe-{version}.x86_64.rpm
-- nrpe-plugin-{version}.x86_64.rpm
-- openldap-servers-{version}.x86_64.rpm
-- perl-DBD-Sybase-{version}.x86_64.rpm
-- perl-Device-Modem-{version}.noarch.rpm
-- perl-Digest-SHA1-{version}.x86_64.rpm
-- pnp-{version}.x86_64.rpm
-- wkhtmltox-{version}.x86_64.rpm
+The Energy Monitor installer is delivered as tarball `energy-monitor-{product_version}.tar.gz`
 
 ### Installation Process
 

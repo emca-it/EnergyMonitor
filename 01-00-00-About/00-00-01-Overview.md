@@ -1,4 +1,4 @@
-# Key concepts
+# Overview
 
 ## Monitoring objects
 
@@ -6,14 +6,14 @@
 
 ### Hosts and Host Groups
 
-Hosts are the core objects in the monitoring system with the following characteristics:
+**Hosts** are the core objects in the monitoring system with the following characteristics:
 
-- **Hosts** represent any physical or virtual devices in a network, such as servers, workstations, routers, switches, and printers.
+- Hosts represent any physical or virtual devices in a network, such as servers, workstations, routers, switches, and printers.
 - Each host has an IP address.
 - Hosts are typically linked to one or more services.
 - Hosts can have parent–child relationships with other hosts, reflecting real-world network connections, which Energy Monitor uses in its network reachability logic.
 
-Hosts are usually organized into one or more host groups along with other hosts. Host groups can be used to:
+Hosts are usually organized into one or more **host groups** along with other hosts. Host groups can be used to:
 
 - Group hosts from the same geographic area.
 - Group hosts of the same type.
@@ -22,13 +22,13 @@ Hosts are usually organized into one or more host groups along with other hosts.
 
 ### Services and Service Groups
 
-A **service** refers to something measurable on a host, like system load, disk usage, database connection times, and the number of logged-in users. Services have these characteristics:
+**Service** refers to something measurable on a host, like system load, disk usage, database connection times, and the number of logged-in users. Services have these characteristics:
 
 - Services must be linked to hosts.
 - Services can execute checks using various methods such as TCP, agents, and SNMP.
 - Services utilize a check command to interact with plugins that retrieve data.
 
-Service groups allow you to organize services based on the service they provide to your customers. For instance, when offering an email service to customers, the email service requires the following components to function correctly:
+**Service groups** allow you to organize services based on the service they provide to your customers. For instance, when offering an email service to customers, the email service requires the following components to function correctly:
 
 - DNS
 - MTA
@@ -50,11 +50,11 @@ The hierarchy of monitored objects is crucial for Energy Monitor when diagnosing
 
 ### Alerts
 
-Energy Monitor generates an alert whenever a service or host changes its state. This includes scenarios like an unreachable host coming back online or a service that was functioning correctly starting to show a warning. By default, the check interval is set to five minutes.
+Energy Monitor generates an **alert** whenever a service or host changes its state. This includes scenarios like an unreachable host coming back online or a service that was functioning correctly starting to show a warning. By default, the check interval is set to five minutes.
 
 ### Monitoring States
 
-When Energy Monitor detects a problem, it initially classifies it as a **soft problem**. If the number of checks reaches the configured threshold (`max_check_attempts`), the problem is reclassified as **hard**, triggering a notification. Notifications are not sent for soft problems.
+When Energy Monitor detects a problem, it initially classifies it as a **soft state**. If the number of checks reaches the configured threshold (`max_check_attempts`), the problem is reclassified as **hard**, triggering a notification. Notifications are not sent for soft problems.
 
 ### On-demand Checks
 
@@ -64,11 +64,11 @@ Energy Monitor performs on-demand checks in specific situations, such as:
 - As part of the host reachability logic.
 - For predictive host dependency checks.
 
-On-demand checks are primarily executed when a service changes state to ensure that the host enters a hard critical state before its associated services during a full server outage. This helps avoid a notification storm by ensuring that Energy Monitor sends only one host notification instead of multiple service notifications.
+**On-demand** checks are primarily executed when a service changes state to ensure that the host enters a hard critical state before its associated services during a full server outage. This helps avoid a notification storm by ensuring that Energy Monitor sends only one host notification instead of multiple service notifications.
 
 ### Notifications
 
-Users defined as contacts and linked to relevant services and hosts receive notifications based on the configuration in Energy Monitor. While all notifications are associated with alerts, not all alerts result in notifications. Energy Monitor can send notifications via email or SMS, and with additional configuration, it can also send notifications to other destinations such as databases and ticketing systems.
+Users defined as contacts and linked to relevant services and hosts receive **notifications** based on the configuration in Energy Monitor. While all notifications are associated with alerts, not all alerts result in notifications. Energy Monitor can send notifications via email or SMS, and with additional configuration, it can also send notifications to other destinations such as databases and ticketing systems.
 
 ## Monitoring agents in Energy Monitor
 
