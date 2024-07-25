@@ -20,7 +20,7 @@ Energy Monitor User Guide
    03-00-00-Getting-started/03-00-01-Getting-started.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: User Manual
 
    04-00-00-User-manual/04-01-00-Configuration-overview.md
