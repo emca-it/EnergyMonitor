@@ -1,7 +1,5 @@
 # User Manual
 
-## Overview
-
 Configuration tasks can be carried out either through the Energy Monitor user interface or via the command line. These tasks should only be performed by users with the necessary experience and permissions, particularly when using the command line.
 
 ## Configuration Page
