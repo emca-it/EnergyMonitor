@@ -54,7 +54,7 @@ Energy Monitor generates an **alert** whenever a service or host changes its sta
 
 ### Monitoring States
 
-When Energy Monitor detects a problem, it initially classifies it as a **soft state**. If the number of checks reaches the configured threshold (`max_check_attempts`), the problem is reclassified as **hard**, triggering a notification. Notifications are not sent for soft problems.
+When Energy Monitor detects a problem, it initially classifies it as a **soft state**. If the number of checks reaches the configured threshold (`max_check_attempts`), the problem is reclassified as **hard**, triggering a notification. Notifications are not sent for soft states.
 
 ### On-demand Checks
 
