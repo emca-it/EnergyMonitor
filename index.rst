@@ -22,5 +22,5 @@ Energy Monitor User Guide
 .. toctree::
            :maxdepth: 1
            :caption: User Manual
-       04-00-00-User-manual\04-01-00-Configuration-overview.md
-       04-00-00-User-manual\04-01-01-Overseeing-Hosts-and-Services.md
+       04-00-00-User-manual/04-01-00-Configuration-overview.md
+       04-00-00-User-manual/04-01-01-Overseeing-Hosts-and-Services.md
