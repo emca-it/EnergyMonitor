@@ -114,3 +114,290 @@ The sequence in which you create hosts, services, and their respective groups do
 <br>
 
 For background information on hosts, services, host groups, and service groups, see Monitoring objects in [Overview of Energy Monitor](../01-00-00-About/01-00-02-Overview.md).
+
+### Procedure for Adding Windows Hosts to the Energy Monitor System
+
+Adding Windows hosts to the Energy Monitor system requires several steps, which include installing the necessary software, configuring the monitoring agent, and verifying the connection. Below is a detailed procedure:
+
+#### Step 1: Prepare the Windows Host
+
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to the Windows host:
+You need administrative privileges to install software on the Windows host.</b>
+</blockquote><br>
+
+Install the required tools:
+
+- Download and install NSClient++ (a monitoring tool for Windows systems) from the [NSClient++ website](https://www.nsclient.org/download/).
+
+#### Step 2: Install and Configure NSClient++
+
+1. **Install NSClient++**:
+
+    - Run the downloaded installer and follow the installation instructions. Choose options such as installing it as a Windows service.
+    ![first_step](/media/04_01_nsc_1.png)
+    - Provide atleast one ip of Energy Monitor instance.
+    ![second_step](/media/04_01_nsc_2.png)
+    - Confirm start of installation process.
+    ![final_step](/media/04_01_nsc_3.png)
+
+1. **Configure NSClient++**:
+
+    - Open the configuration file nsclient.ini, typically located in the NSClient++ installation directory (e.g., C:\Program Files\NSClient++).
+    - Edit the configuration file to allow communication with the Energy Monitor server. Ensure that the appropriate modules are enabled, such as NRPE and CheckExternalScripts.
+
+    Example configuration:
+
+    ```ini
+    [/settings/default]
+
+    ; Undocumented key
+    allowed hosts = 192.168.3.5
+
+
+    ; in flight - TODO
+    [/settings/NRPE/server]
+
+    ; Undocumented key
+    ssl options = 
+
+    ; Undocumented key
+    verify mode = none
+
+    ; Undocumented key
+    insecure = true
+
+    ; Allow Arguements
+    allow arguments = true
+
+    ; Allow nasty chars
+    allow nasty characters = true
+
+
+    ; in flight - TODO
+    [/modules]
+
+    ; Undocumented key
+    CheckExternalScripts = enabled
+
+    ; Undocumented key
+    CheckHelpers = enabled
+
+    ; Undocumented key
+    CheckEventLog = enabled
+
+    ; Undocumented key
+    CheckNSCP = enabled
+
+    ; Undocumented key
+    CheckDisk = enabled
+
+    ; Undocumented key
+    CheckSystem = enabled
+
+    ; Undocumented key
+    NSClientServer = enabled
+
+    ; Undocumented key
+    NRPEServer = enabled
+   ```
+
+1. **Restart the NSClient++ service**:
+
+    - After making changes to the configuration file, restart the NSClient++ service using the Windows Services Manager.
+
+#### Step 3: Configure Energy Monitor
+
+1. **Log in to the Energy Monitor web interface**:
+
+    - Open a web browser and log in to the Energy Monitor admin panel.
+
+1. **Add a new host**:
+
+    - Navigate to Manage -> Configure -> Hosts.
+    ![win_add_host](/media/04_01_win_em_1.png)
+
+1. **Enter host details**:
+
+    - Provide the hostname, IP address, and other required details.
+    ![win_add_host2](/media/04_01_new_host.png)
+
+1. **Save the configuration and perform a test**:
+
+    - Save the new host configuration and perform a monitoring test to ensure that Energy Monitor can communicate with the Windows host correctly.
+    ![save](/media/04_01_save.png)
+
+#### Step 4: Add services
+
+Add monitoring services such as availability checks, CPU usage, memory usage, disk usage, etc., using NSClient++ as the data source.
+
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure that you use the appropriate NRPE commands or other commands defined in the nsclient.ini file.</b>
+</blockquote><br>
+
+1. **Search for added host**:
+
+    - Use a search bar
+    ![search_host](/media/04_01_win_search.png)
+
+1. **Open configuration**:
+
+    - Open configuration of freshly added host from listview:
+    ![open_config](/media/04_01_win_conf.png)
+    - After open host configuration got to it services configuration:
+    ![open_service_config](/media/04_01_win_conf_serv.png)
+
+1. **Add service**:
+
+    - Fill service description(reuired)
+    - Choose correct `check_command` to monitor required parameter
+    - Fill `check_command_args` if required or create `Custom Variable`
+    ![service_desc](/media/04_01_win_conf_serv_new.png)
+
+1. **Test if configuration of new service is correct**:
+
+    - After filled up necessary firlds you can check response of service by clicking in `Test This Check`:
+    ![test_this_check](/media/04_01_win_conf_serv_test.png)
+
+1. **Submit and Save**
+
+    - All changes in configuration(like adding new object) need to be submited by clicking in submit button at the bottom of object configuration page.
+    - Next you need to perform save like at "Add host" step.
+    - Before perform save you can add as many services as you want.
+
+#### Step 5: Verification and Monitoring
+
+1. **Check the status of the host and services**:
+
+    - Ensure that the newly added host and its services are visible in the Energy Monitor dashboard and that real-time data is being received.
+
+1. **Configure notifications**:
+
+    - Set up appropriate notifications to receive alerts in case of issues with the monitored Windows host.
+
+### Procedure for Monitoring Linux Systems with Energy Monitor
+
+This documentation provides a step-by-step guide on how to monitor Linux systems using Energy Monitor. By following these instructions, you will be able to set up monitoring for various aspects of your Linux hosts, such as system performance, availability, and resource usage.
+
+#### Prerequisites
+
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure that you have Energy Monitor installed and configured.</b>
+</blockquote><br>
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to both the Energy Monitor server and the Linux systems you want to monitor.</b>
+</blockquote>
+
+#### Step 1: Install NRPE and Nagios Plugins on Linux Host
+
+1. **Update Package Repository**:
+
+   ```bash
+   sudo apt update  # For Debian/Ubuntu
+   sudo yum update  # For CentOS/RHEL
+   ```
+
+2. **Install NRPE and Nagios Plugins**:
+
+   ```bash
+   sudo apt install nagios-nrpe-server nagios-plugins  # For Debian/Ubuntu
+   sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
+   ```
+
+3. **Configure NRPE**:
+   - Open the NRPE configuration file:
+
+     ```bash
+     sudo vim /etc/nagios/nrpe.cfg  # Path may vary depending on distribution
+     ```
+
+   - Add the IP address of your Energy Monitor server to the `allowed_hosts` directive:
+
+     ```ini
+     allowed_hosts=127.0.0.1,ENERGY_MONITOR_SERVER_IP
+     ```
+
+4. **Define Commands in NRPE Configuration**:
+   - Add or modify commands in the `nrpe.cfg` file to match your monitoring requirements. Here are some example command definitions:
+
+     ```ini
+     command[check_load]=/usr/lib/nagios/plugins/check_load -w 5,4,3 -c 10,8,6
+     command[check_disk]=/usr/lib/nagios/plugins/check_disk -w 20% -c 10% -p /
+     command[check_procs]=/usr/lib/nagios/plugins/check_procs -w 150 -c 200
+     ```
+
+5. **Restart NRPE Service**:
+
+   ```bash
+   sudo systemctl restart nagios-nrpe-server  # For Debian/Ubuntu
+   sudo systemctl restart nrpe  # For CentOS/RHEL
+   ```
+
+#### Step 2: Configure Energy Monitor
+
+1. **Log in to the Energy Monitor web interface**:
+
+    - Open a web browser and log in to the Energy Monitor admin panel.
+
+1. **Add a new host**:
+
+    - Navigate to Manage -> Configure -> Hosts.
+    ![win_add_host](/media/04_01_win_em_1.png)
+
+1. **Enter host details**:
+
+    - Provide the hostname, IP address, and other required details.
+    ![win_add_host2](/media/04_01_new_host_lin.png)
+
+1. **Save the configuration and perform a test**:
+
+    - Save the new host configuration and perform a monitoring test to ensure that Energy Monitor can communicate with the Windows host correctly.
+    ![save](/media/04_01_save.png)
+
+1. **Save Configuration and Apply Changes**:
+   - Save your configuration changes and apply them. This will update the Energy Monitor system to start monitoring the new Linux host and its services.
+
+#### Step 3: Add services
+
+1. **Search for added host**:
+
+    - Use a search bar
+    ![search_host](/media/04_01_lin_search.png)
+
+1. **Open configuration**:
+
+    - Open configuration of freshly added host from listview:
+    ![open_config](/media/04_01_lin_conf.png)
+    - After open host configuration got to it services configuration:
+    ![open_service_config](/media/04_01_lin_conf_serv.png)
+
+1. **Add service**:
+
+    - Fill service description(reuired)
+    - Choose correct `check_command` to monitor required parameter
+    - Fill `check_command_args` if required or create `Custom Variable`
+    ![service_desc](/media/04_01_lin_conf_serv_new.png)
+
+1. **Test if configuration of new service is correct**:
+
+    - After filled up necessary firlds you can check response of service by clicking in `Test This Check`:
+    ![test_this_check](/media/04_01_lin_conf_serv_test.png)
+
+1. **Submit and Save**
+
+    - All changes in configuration(like adding new object) need to be submited by clicking in submit button at the bottom of object configuration page.
+    - Next you need to perform save like at "Add host" step.
+    - Before perform save you can add as many services as you want.
+
+#### Step 4: Verification and Monitoring
+
+1. **Verify Host and Services Status**:
+   - Check the Energy Monitor dashboard to ensure the newly added Linux host and its services are listed and being monitored.
+
+2. **Set Up Notifications**:
+   - Configure notifications to alert you in case of any issues with the monitored Linux host. Navigate to `Configuration` -> `Notifications` and set up your preferred notification methods (e.g., email, SMS).
+
+### Benefits of Monitoring with Energy Monitor
+
+- **Centralized Monitoring**: Ability to monitor all Linux systems from a single, central location.
+- **Early Problem Detection**: Quickly identify performance and availability issues.
+- **Compliance with Security Policies**: Maintain compliance with internal and external security requirements.
+- **Automation of Management**: Automated data collection and reporting streamline IT infrastructure management.
+
+By following this procedure, you can effectively monitor your Linux systems using Energy Monitor, ensuring high levels of system availability and performance.
