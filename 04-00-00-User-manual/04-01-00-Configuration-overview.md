@@ -403,7 +403,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 By following this procedure, you can effectively monitor your Linux systems using Energy Monitor, ensuring high levels of system availability and performance.
 
 .. toctree::
-   :maxdepth: 2
-   :titlesonly:
-
-   04-02-00-Business-Intelligence
+    :maxdepth: 2
+    :titlesonly:
+    
+    04-02-00-Business-Intelligence
