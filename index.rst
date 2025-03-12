@@ -19,5 +19,6 @@ Energy Monitor User Guide
 
 .. toctree::
     :maxdepth: 2
+    :caption: User Manual
 
     04-00-00-User-manual/04-01-00-Configuration-overview.md

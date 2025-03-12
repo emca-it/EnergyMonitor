@@ -1,8 +1,6 @@
-# User Manual
-
 Configuration tasks can be carried out either through the Energy Monitor user interface or via the command line. These tasks should only be performed by users with the necessary experience and permissions, particularly when using the command line.
 
-## Configuration Page
+# Configuration Page
 
 Most of Energy Monitor's key configuration functions can be found on the configuration page, accessible by clicking **Manage -> Configure**.
 
@@ -20,7 +18,7 @@ Additional tasks you can perform:
 - Search for an existing host to configure.
 - View a list of plugins along with their support details.
 
-### Common Configuration Features
+## Common Configuration Features
 
 Different configuration functions share some common features:
 
@@ -44,7 +42,7 @@ Energy Monitor provides several shortcuts to streamline the configuration proces
 
 You can switch between object types using the **Object type menu** to view and configure related items. These shortcuts work consistently across all object types.
 
-### Saving Configuration Changes and Viewing the Changelog
+## Saving Configuration Changes and Viewing the Changelog
 
 To save your configuration changes, click **Save** in the top bar of the configuration page. Energy Monitor usually saves most configuration objects to the configuration database, with some exceptions such as the Permissions section. Visual cues indicate when you need to save a configuration, as explained in the workflow below:
 
@@ -63,7 +61,7 @@ Additional actions you can perform:
 - **Undo**: To revert all user changes since the last save, click **Undo**. This action provides the option to perform a complete reimport by clicking the displayed link.
 - **Changelog**: View the history of all configuration changes by clicking **Changelog**. Filter the list of changes by clicking **Toggle filter bar** and entering details of users, objects, and dates. Users with limited permissions will only see changes on hosts and services for which they are contacts.
 
-### Reusable Configuration
+## Reusable Configuration
 
 You can set up the following reusable configurations for use with other objects:
 
@@ -73,7 +71,7 @@ You can set up the following reusable configurations for use with other objects:
 
 Energy Monitor comes with default reusable configurations for each of these types. You can either use these default settings, modify them, or create your own custom configurations.
 
-### View active config
+## View active config
 
 To view the details of the current configuration, select **Manage > View active config** from the menu. Use the **Object type** drop-down list to choose the specific object you wish to view.
 
@@ -90,15 +88,15 @@ You can view configurations for the following types:
 
 To filter the displayed objects, enter a term in the filter field and click **Filter**. Additionally, you can click on links within the view to access details of related object configurations. For example, clicking a link in the **Host Check Command** column will take you to the related commands view.
 
-### Commands and custom variables
+## Commands and custom variables
 
 You can define command lines and create custom variables when setting up configuration objects, including templates, hosts, services, and contacts.
 
-### Configuration synchronization in distributed environment
+## Configuration synchronization in distributed environment
 
 In a distributed or load-balanced monitoring environment, Energy Monitor’s Merlin back end manages the synchronization of configuration updates on the master server.
 
-## Overseeing Hosts and Services
+# Overseeing Hosts and Services
 
 The following procedures outline how to add, update, and configure monitoring objects, including:
 
@@ -115,11 +113,11 @@ The sequence in which you create hosts, services, and their respective groups do
 
 For background information on hosts, services, host groups, and service groups, see Monitoring objects in [Overview of Energy Monitor](../01-00-00-About/01-00-02-Overview.md).
 
-### Procedure for Adding Windows Hosts to the Energy Monitor System
+## Procedure for Adding Windows Hosts to the Energy Monitor System
 
 Adding Windows hosts to the Energy Monitor system requires several steps, which include installing the necessary software, configuring the monitoring agent, and verifying the connection. Below is a detailed procedure:
 
-#### Step 1: Prepare the Windows Host
+### Step 1: Prepare the Windows Host
 
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to the Windows host:
 You need administrative privileges to install software on the Windows host.</b>
@@ -129,7 +127,7 @@ Install the required tools:
 
 - Download and install NSClient++ (a monitoring tool for Windows systems) from the [NSClient++ website](https://www.nsclient.org/download/).
 
-#### Step 2: Install and Configure NSClient++
+### Step 2: Install and Configure NSClient++
 
 1. **Install NSClient++**:
 
@@ -205,7 +203,7 @@ Install the required tools:
 
     - After making changes to the configuration file, restart the NSClient++ service using the Windows Services Manager.
 
-#### Step 3: Configure Energy Monitor
+### Step 3: Configure Energy Monitor
 
 1. **Log in to the Energy Monitor web interface**:
 
@@ -226,7 +224,7 @@ Install the required tools:
     - Save the new host configuration and perform a monitoring test to ensure that Energy Monitor can communicate with the Windows host correctly.
     ![save](/media/04_01_save.png)
 
-#### Step 4: Add services
+### Step 4: Add services
 
 Add monitoring services such as availability checks, CPU usage, memory usage, disk usage, etc., using NSClient++ as the data source.
 
@@ -263,7 +261,7 @@ Add monitoring services such as availability checks, CPU usage, memory usage, di
     - Next you need to perform save like at "Add host" step.
     - Before perform save you can add as many services as you want.
 
-#### Step 5: Verification and Monitoring
+### Step 5: Verification and Monitoring
 
 1. **Check the status of the host and services**:
 
@@ -273,7 +271,7 @@ Add monitoring services such as availability checks, CPU usage, memory usage, di
 
     - Set up appropriate notifications to receive alerts in case of issues with the monitored Windows host.
 
-### Procedure for Monitoring Linux Systems with Energy Monitor
+## Procedure for Monitoring Linux Systems with Energy Monitor
 
 This documentation provides a step-by-step guide on how to monitor Linux systems using Energy Monitor. By following these instructions, you will be able to set up monitoring for various aspects of your Linux hosts, such as system performance, availability, and resource usage.
 
@@ -284,7 +282,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to both the Energy Monitor server and the Linux systems you want to monitor.</b>
 </blockquote>
 
-#### Step 1: Install NRPE and Nagios Plugins on Linux Host
+### Step 1: Install NRPE and Nagios Plugins on Linux Host
 
 1. **Update Package Repository**:
 
@@ -329,7 +327,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
    sudo systemctl restart nrpe  # For CentOS/RHEL
    ```
 
-#### Step 2: Configure Energy Monitor
+### Step 2: Configure Energy Monitor
 
 1. **Log in to the Energy Monitor web interface**:
 
@@ -353,7 +351,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 1. **Save Configuration and Apply Changes**:
    - Save your configuration changes and apply them. This will update the Energy Monitor system to start monitoring the new Linux host and its services.
 
-#### Step 3: Add services
+### Step 3: Add services
 
 1. **Search for added host**:
 
@@ -385,7 +383,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
     - Next you need to perform save like at "Add host" step.
     - Before perform save you can add as many services as you want.
 
-#### Step 4: Verification and Monitoring
+### Step 4: Verification and Monitoring
 
 1. **Verify Host and Services Status**:
    - Check the Energy Monitor dashboard to ensure the newly added Linux host and its services are listed and being monitored.
@@ -393,7 +391,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 2. **Set Up Notifications**:
    - Configure notifications to alert you in case of any issues with the monitored Linux host. Navigate to `Configuration` -> `Notifications` and set up your preferred notification methods (e.g., email, SMS).
 
-### Benefits of Monitoring with Energy Monitor
+## Benefits of Monitoring with Energy Monitor
 
 - **Centralized Monitoring**: Ability to monitor all Linux systems from a single, central location.
 - **Early Problem Detection**: Quickly identify performance and availability issues.
