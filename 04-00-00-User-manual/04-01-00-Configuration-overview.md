@@ -408,7 +408,7 @@ By following this procedure, you can effectively monitor your Linux systems usin
 
 Energy monitor integrates monitoring with Business Intelligence (BI) to provide an overview of the applications and services your organization offers, both to customers and internally. You can share the BI services you create with other business units and organizations, making them valuable in scenarios where an overview and state information are needed on a specific service, such as supporting non-technical staff in service delivery or fulfilling Service Level Agreement obligations.
 
-#### Designing a Business Intelligence
+### Designing a Business Intelligence
 
 When setting up a new Business Intelligence, the initial task is to pinpoint the core service components within your organization, assess their features, and map out their network hierarchy. With this groundwork completed, you can formulate a design that aligns with your business objectives and outlines an effective service topology.
 
