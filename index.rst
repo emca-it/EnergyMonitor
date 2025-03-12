@@ -21,5 +21,3 @@ Energy Monitor User Guide
     :maxdepth: 2
 
     04-00-00-User-manual/04-01-00-Configuration-overview.md
-    04-00-00-User-manual/04-02-00-Business-Intelligence.md
-       
