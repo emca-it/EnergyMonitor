@@ -1,6 +1,8 @@
+# User Manual
+
 Configuration tasks can be carried out either through the Energy Monitor user interface or via the command line. These tasks should only be performed by users with the necessary experience and permissions, particularly when using the command line.
 
-# Configuration Page
+## Configuration Page
 
 Most of Energy Monitor's key configuration functions can be found on the configuration page, accessible by clicking **Manage -> Configure**.
 
@@ -18,7 +20,7 @@ Additional tasks you can perform:
 - Search for an existing host to configure.
 - View a list of plugins along with their support details.
 
-## Common Configuration Features
+### Common Configuration Features
 
 Different configuration functions share some common features:
 
@@ -30,7 +32,7 @@ Different configuration functions share some common features:
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Note</b>: It is not recommended to update the system configuration file directly.
 </blockquote>
 
-### Configuration Shortcuts
+#### Configuration Shortcuts
 
 Energy Monitor provides several shortcuts to streamline the configuration process:
 
@@ -42,7 +44,7 @@ Energy Monitor provides several shortcuts to streamline the configuration proces
 
 You can switch between object types using the **Object type menu** to view and configure related items. These shortcuts work consistently across all object types.
 
-## Saving Configuration Changes and Viewing the Changelog
+### Saving Configuration Changes and Viewing the Changelog
 
 To save your configuration changes, click **Save** in the top bar of the configuration page. Energy Monitor usually saves most configuration objects to the configuration database, with some exceptions such as the Permissions section. Visual cues indicate when you need to save a configuration, as explained in the workflow below:
 
@@ -61,7 +63,7 @@ Additional actions you can perform:
 - **Undo**: To revert all user changes since the last save, click **Undo**. This action provides the option to perform a complete reimport by clicking the displayed link.
 - **Changelog**: View the history of all configuration changes by clicking **Changelog**. Filter the list of changes by clicking **Toggle filter bar** and entering details of users, objects, and dates. Users with limited permissions will only see changes on hosts and services for which they are contacts.
 
-## Reusable Configuration
+### Reusable Configuration
 
 You can set up the following reusable configurations for use with other objects:
 
@@ -71,7 +73,7 @@ You can set up the following reusable configurations for use with other objects:
 
 Energy Monitor comes with default reusable configurations for each of these types. You can either use these default settings, modify them, or create your own custom configurations.
 
-## View active config
+### View active config
 
 To view the details of the current configuration, select **Manage > View active config** from the menu. Use the **Object type** drop-down list to choose the specific object you wish to view.
 
@@ -88,15 +90,15 @@ You can view configurations for the following types:
 
 To filter the displayed objects, enter a term in the filter field and click **Filter**. Additionally, you can click on links within the view to access details of related object configurations. For example, clicking a link in the **Host Check Command** column will take you to the related commands view.
 
-## Commands and custom variables
+### Commands and custom variables
 
 You can define command lines and create custom variables when setting up configuration objects, including templates, hosts, services, and contacts.
 
-## Configuration synchronization in distributed environment
+### Configuration synchronization in distributed environment
 
 In a distributed or load-balanced monitoring environment, Energy Monitor’s Merlin back end manages the synchronization of configuration updates on the master server.
 
-# Overseeing Hosts and Services
+## Overseeing Hosts and Services
 
 The following procedures outline how to add, update, and configure monitoring objects, including:
 
@@ -113,11 +115,11 @@ The sequence in which you create hosts, services, and their respective groups do
 
 For background information on hosts, services, host groups, and service groups, see Monitoring objects in [Overview of Energy Monitor](../01-00-00-About/01-00-02-Overview.md).
 
-## Procedure for Adding Windows Hosts to the Energy Monitor System
+### Procedure for Adding Windows Hosts to the Energy Monitor System
 
 Adding Windows hosts to the Energy Monitor system requires several steps, which include installing the necessary software, configuring the monitoring agent, and verifying the connection. Below is a detailed procedure:
 
-### Step 1: Prepare the Windows Host
+#### Step 1: Prepare the Windows Host
 
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to the Windows host:
 You need administrative privileges to install software on the Windows host.</b>
@@ -127,7 +129,7 @@ Install the required tools:
 
 - Download and install NSClient++ (a monitoring tool for Windows systems) from the [NSClient++ website](https://www.nsclient.org/download/).
 
-### Step 2: Install and Configure NSClient++
+#### Step 2: Install and Configure NSClient++
 
 1. **Install NSClient++**:
 
@@ -203,7 +205,7 @@ Install the required tools:
 
     - After making changes to the configuration file, restart the NSClient++ service using the Windows Services Manager.
 
-### Step 3: Configure Energy Monitor
+#### Step 3: Configure Energy Monitor
 
 1. **Log in to the Energy Monitor web interface**:
 
@@ -224,7 +226,7 @@ Install the required tools:
     - Save the new host configuration and perform a monitoring test to ensure that Energy Monitor can communicate with the Windows host correctly.
     ![save](/media/04_01_save.png)
 
-### Step 4: Add services
+#### Step 4: Add services
 
 Add monitoring services such as availability checks, CPU usage, memory usage, disk usage, etc., using NSClient++ as the data source.
 
@@ -261,7 +263,7 @@ Add monitoring services such as availability checks, CPU usage, memory usage, di
     - Next you need to perform save like at "Add host" step.
     - Before perform save you can add as many services as you want.
 
-### Step 5: Verification and Monitoring
+#### Step 5: Verification and Monitoring
 
 1. **Check the status of the host and services**:
 
@@ -271,18 +273,18 @@ Add monitoring services such as availability checks, CPU usage, memory usage, di
 
     - Set up appropriate notifications to receive alerts in case of issues with the monitored Windows host.
 
-## Procedure for Monitoring Linux Systems with Energy Monitor
+### Procedure for Monitoring Linux Systems with Energy Monitor
 
 This documentation provides a step-by-step guide on how to monitor Linux systems using Energy Monitor. By following these instructions, you will be able to set up monitoring for various aspects of your Linux hosts, such as system performance, availability, and resource usage.
 
-#### Prerequisites
+##### Prerequisites
 
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure that you have Energy Monitor installed and configured.</b>
 </blockquote><br>
 <blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Ensure you have administrative access to both the Energy Monitor server and the Linux systems you want to monitor.</b>
 </blockquote>
 
-### Step 1: Install NRPE and Nagios Plugins on Linux Host
+#### Step 1: Install NRPE and Nagios Plugins on Linux Host
 
 1. **Update Package Repository**:
 
@@ -327,7 +329,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
    sudo systemctl restart nrpe  # For CentOS/RHEL
    ```
 
-### Step 2: Configure Energy Monitor
+#### Step 2: Configure Energy Monitor
 
 1. **Log in to the Energy Monitor web interface**:
 
@@ -351,7 +353,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 1. **Save Configuration and Apply Changes**:
    - Save your configuration changes and apply them. This will update the Energy Monitor system to start monitoring the new Linux host and its services.
 
-### Step 3: Add services
+#### Step 3: Add services
 
 1. **Search for added host**:
 
@@ -383,7 +385,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
     - Next you need to perform save like at "Add host" step.
     - Before perform save you can add as many services as you want.
 
-### Step 4: Verification and Monitoring
+#### Step 4: Verification and Monitoring
 
 1. **Verify Host and Services Status**:
    - Check the Energy Monitor dashboard to ensure the newly added Linux host and its services are listed and being monitored.
@@ -391,7 +393,7 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 2. **Set Up Notifications**:
    - Configure notifications to alert you in case of any issues with the monitored Linux host. Navigate to `Configuration` -> `Notifications` and set up your preferred notification methods (e.g., email, SMS).
 
-## Benefits of Monitoring with Energy Monitor
+### Benefits of Monitoring with Energy Monitor
 
 - **Centralized Monitoring**: Ability to monitor all Linux systems from a single, central location.
 - **Early Problem Detection**: Quickly identify performance and availability issues.
@@ -400,8 +402,80 @@ This documentation provides a step-by-step guide on how to monitor Linux systems
 
 By following this procedure, you can effectively monitor your Linux systems using Energy Monitor, ensuring high levels of system availability and performance.
 
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
-    
-    04-02-00-Business-Intelligence
+## Business Intelligence (BI)
+
+### Overview
+
+Energy monitor integrates monitoring with Business Intelligence (BI) to provide an overview of the applications and services your organization offers, both to customers and internally. You can share the BI services you create with other business units and organizations, making them valuable in scenarios where an overview and state information are needed on a specific service, such as supporting non-technical staff in service delivery or fulfilling Service Level Agreement obligations.
+
+#### Designing a Business Intelligence
+
+When setting up a new Business Intelligence, the initial task is to pinpoint the core service components within your organization, assess their features, and map out their network hierarchy. With this groundwork completed, you can formulate a design that aligns with your business objectives and outlines an effective service topology.
+
+Key considerations for your design include:
+
+- Determining if the service should track both availability and performance metrics.
+- Deciding which applications and components, such as ticketing or CRM systems, should be integrated into the business service.
+- Establishing the necessary level of availability to ensure the service fulfills its intended goals.
+
+In Energy Monitor, a BI is organized as groups of sub-elements, accompanied by rule sets that dictate when state changes are reported.
+
+### Rule sets
+
+Below, you'll find a description of the various rule sets available. Keep in mind that each rule set applies solely to the sub-elements on the level immediately below.
+
+#### Thresholds
+
+In Business Inteligence, thresholds are pivotal in monitoring the health of BI groups by defining warning and critical limits.
+
+Defining Thresholds:
+
+- **Warning Threshold**: Specifies the number of issues after which the BI group's status changes to a warning.
+- **Critical Threshold**: Specifies the number of issues after which the BI group's status changes to critical.
+
+For example, if a group's warning threshold is set to 2 and the critical threshold to 4:
+
+    When the number of issues reaches 2, the group's status changes to warning.
+    When the number of issues reaches 4 or more, the group's status changes to critical.
+
+These thresholds allow for flexible monitoring tailored to the infrastructure's specifics, enabling early detection of potential problems and the implementation of appropriate corrective actions.
+
+_Additional Information: Check [Essential Member](#essential-member)_
+
+#### Scores
+
+Calculates an overall state by summing the scores assigned to each sub-element (0 for OK, 1 for WARNING, 2 for CRITICAL) and then comparing that total against pre-set thresholds for a WARNING or OK condition.
+
+Multiple sub-elements in a WARNING state are treated as equivalent to a mix of sub-elements in both OK and CRITICAL states.
+
+    Scores(4,3,num) of {OK, OK, WARNING, CRITICAL} => WARNING
+    Scores(4,3,num) of {OK, WARNING, WARNING, WARNING} => WARNING 
+    Scores(4,3,num) of {WARNING, WARNING, WARNING, WARNING} => CRITICAL
+    Scores(4,3,num) of {WARNING, WARNING, WARNING, WARNING} => CRITICAL
+
+#### Essential Member
+
+Essential members are critical sub-elements within a BI group that directly influence the overall health and state of a business process. By identifying and designating these indispensable components, the system ensures that their failure immediately reflects on the process status, regardless of the aggregate score calculated from non-essential elements.
+
+The primary goal of marking essential members is to accurately identify and prioritize the health of components that are vital for business operations. This approach prevents scenarios where a majority of non-critical elements might mask the failure of a crucial service, thereby enabling operations teams to quickly pinpoint and address issues that have a high impact on the business process.
+
+Furthermore, essential members simplify the overall monitoring logic. Instead of relying solely on the sum of individual scores (e.g., OK = 0, WARNING = 1, CRITICAL = 2) and pre-set thresholds, the failure of any essential member can trigger an immediate state change. This ensures that the integrity of critical business functions is maintained, and any deviation in their performance is promptly escalated for remediation.
+
+    Consider a BI group that monitors a business process consisting of several services. Suppose one service, responsible for processing payments, is marked as an essential member:
+
+    Non-Essential Members:
+    These may include services like reporting, notifications, or logging, which contribute to the aggregate score but are not critical enough to override the process state on their own.
+
+    Essential Member – Payment Processing:
+    If the payment processing service transitions to a WARNING or CRITICAL state, the entire process is flagged as problematic immediately. This is done even if the overall score from non-essential members might otherwise fall within acceptable ranges.
+
+#### Constant
+
+This type of BI group is configured to always report a fixed status—OK, WARNING, or CRITICAL—regardless of the real-time conditions of its sub-elements.
+
+- Fixed OK: The group always shows an OK status.
+- Fixed WARNING: The group is permanently in a warning state.
+- Fixed CRITICAL: The group continuously reports a critical status.
+- Fixed UNKNOWN:  The group always returns an unknown status, indicating that the actual state cannot be determined or is not applicable.
+
+This configuration is ideal for testing, overriding dynamic calculations, or maintaining consistent reporting in specific scenarios.
