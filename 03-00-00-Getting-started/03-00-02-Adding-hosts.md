@@ -4,7 +4,6 @@
 
 ![Adding_hosts](/media/03-00-02_Adding_hosts.png)
 
-
 ### 2. **Fill mandatory fields:**
 
 ![Adding_hosts](/media/03-00-02_Adding_hosts_2.png)
