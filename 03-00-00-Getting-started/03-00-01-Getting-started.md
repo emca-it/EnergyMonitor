@@ -7,7 +7,7 @@
 To log in to Energy Monitor:
 
 1. Enter Energy Monitor URL in web browser
-1. Enter your Username and Passowrd and clikc Log In
+1. Enter your Username and Password and click Log In
 
 > **Additional Notes** \
 > If more than one authorisation module is configured, you need to select the one you want to use from *Login method* drop down list.

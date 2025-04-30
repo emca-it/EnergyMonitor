@@ -1,0 +1,77 @@
+## Business Intelligence (BI)
+
+### Overview
+
+Energy monitor integrates monitoring with Business Intelligence (BI) to provide an overview of the applications and services your organization offers, both to customers and internally. You can share the BI services you create with other business units and organizations, making them valuable in scenarios where an overview and state information are needed on a specific service, such as supporting non-technical staff in service delivery or fulfilling Service Level Agreement obligations.
+
+### Designing a Business Intelligence
+
+When setting up a new Business Intelligence, the initial task is to pinpoint the core service components within your organization, assess their features, and map out their network hierarchy. With this groundwork completed, you can formulate a design that aligns with your business objectives and outlines an effective service topology.
+
+Key considerations for your design include:
+
+- Determining if the service should track both availability and performance metrics.
+- Deciding which applications and components, such as ticketing or CRM systems, should be integrated into the business service.
+- Establishing the necessary level of availability to ensure the service fulfills its intended goals.
+
+In Energy Monitor, a BI is organized as groups of sub-elements, accompanied by rule sets that dictate when state changes are reported.
+
+### Rule sets
+
+Below, you'll find a description of the various rule sets available. Keep in mind that each rule set applies solely to the sub-elements on the level immediately below.
+
+#### Thresholds
+
+In Business Inteligence, thresholds are pivotal in monitoring the health of BI groups by defining warning and critical limits.
+
+Defining Thresholds:
+
+- **Warning Threshold**: Specifies the number of issues after which the BI group's status changes to a warning.
+- **Critical Threshold**: Specifies the number of issues after which the BI group's status changes to critical.
+
+For example, if a group's warning threshold is set to 2 and the critical threshold to 4:
+
+    When the number of issues reaches 2, the group's status changes to warning.
+    When the number of issues reaches 4 or more, the group's status changes to critical.
+
+These thresholds allow for flexible monitoring tailored to the infrastructure's specifics, enabling early detection of potential problems and the implementation of appropriate corrective actions.
+
+_Additional Information: Check [Essential Member](#essential-member)_
+
+#### Scores
+
+Calculates an overall state by summing the scores assigned to each sub-element (0 for OK, 1 for WARNING, 2 for CRITICAL) and then comparing that total against pre-set thresholds for a WARNING or OK condition.
+
+Multiple sub-elements in a WARNING state are treated as equivalent to a mix of sub-elements in both OK and CRITICAL states.
+
+    Scores(4,3,num) of {OK, OK, WARNING, CRITICAL} => WARNING
+    Scores(4,3,num) of {OK, WARNING, WARNING, WARNING} => WARNING 
+    Scores(4,3,num) of {WARNING, WARNING, WARNING, WARNING} => CRITICAL
+    Scores(4,3,num) of {WARNING, WARNING, WARNING, WARNING} => CRITICAL
+
+#### Essential Member
+
+Essential members are critical sub-elements within a BI group that directly influence the overall health and state of a business process. By identifying and designating these indispensable components, the system ensures that their failure immediately reflects on the process status, regardless of the aggregate score calculated from non-essential elements.
+
+The primary goal of marking essential members is to accurately identify and prioritize the health of components that are vital for business operations. This approach prevents scenarios where a majority of non-critical elements might mask the failure of a crucial service, thereby enabling operations teams to quickly pinpoint and address issues that have a high impact on the business process.
+
+Furthermore, essential members simplify the overall monitoring logic. Instead of relying solely on the sum of individual scores (e.g., OK = 0, WARNING = 1, CRITICAL = 2) and pre-set thresholds, the failure of any essential member can trigger an immediate state change. This ensures that the integrity of critical business functions is maintained, and any deviation in their performance is promptly escalated for remediation.
+
+    Consider a BI group that monitors a business process consisting of several services. Suppose one service, responsible for processing payments, is marked as an essential member:
+
+    Non-Essential Members:
+    These may include services like reporting, notifications, or logging, which contribute to the aggregate score but are not critical enough to override the process state on their own.
+
+    Essential Member – Payment Processing:
+    If the payment processing service transitions to a WARNING or CRITICAL state, the entire process is flagged as problematic immediately. This is done even if the overall score from non-essential members might otherwise fall within acceptable ranges.
+
+#### Constant
+
+This type of BI group is configured to always report a fixed status—OK, WARNING, or CRITICAL—regardless of the real-time conditions of its sub-elements.
+
+- Fixed OK: The group always shows an OK status.
+- Fixed WARNING: The group is permanently in a warning state.
+- Fixed CRITICAL: The group continuously reports a critical status.
+- Fixed UNKNOWN:  The group always returns an unknown status, indicating that the actual state cannot be determined or is not applicable.
+
+This configuration is ideal for testing, overriding dynamic calculations, or maintaining consistent reporting in specific scenarios.

@@ -48,7 +48,7 @@ The Energy Monitor comes with simple installation script called `install.sh`. It
 
 1. Untar the archive containing installer \
     `tar xf energy-monitor-{product_verison}.tar.gz`
-1. Copy license files(both of them) to extracted directory \
+1. Copy license file to extracted directory \
     `cp monitor_*.* energy-monitor/`
 1. Go to the extracted directory \
     `cd energy-monitor`
