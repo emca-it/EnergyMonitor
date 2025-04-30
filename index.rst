@@ -6,11 +6,11 @@ Energy Monitor User Guide
         :caption: Contents
 
 
-       01-00-00-About/01-00-00-About.md
-       01-00-00-About/01-00-01-table-of-contents.md
-       01-00-00-About/01-00-02-Overview.md
-       02-00-00-Install/02-00-01-Installation.md
-       03-00-00-Getting-started/03-00-01-Getting-started.md/ 
+       01-00-00-About/01-00-00-About
+       01-00-00-About/01-00-01-table-of-contents
+       01-00-00-About/01-00-02-Overview
+       02-00-00-Install/02-00-01-Installation.
+       03-00-00-Getting-started/03-00-01-Getting-started
 
 .. toctree::
         :maxdepth: 2
