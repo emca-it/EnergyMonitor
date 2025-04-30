@@ -2,7 +2,7 @@ Energy Monitor User Guide
 --------------------------
 
 .. toctree::
-        :maxdepth: 2
+        :maxdepth: 4
 
        01-00-00-About/01-00-00-table-of-contents.md
        01-00-00-About/01-00-01-About.md
