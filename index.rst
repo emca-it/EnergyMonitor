@@ -16,8 +16,8 @@ Energy Monitor User Guide
 .. toctree::
         :maxdepth: 2
                                
-       03-00-00-Getting-started/03-00-01-Getting-started.md
-       03-00-01-Saving-the-changes.md
+       03-00-00-Getting-started/03-00-01-Getting-started.md/03-00-01-Saving-the-changes.md
+       
 
 .. toctree::
         :maxdepth: 2
