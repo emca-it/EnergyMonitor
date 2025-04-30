@@ -6,7 +6,8 @@ Energy Monitor User Guide
            
        01-00-00-About/01-00-01-About.md
        01-00-00-About/01-00-02-Overview.md
-        
+       
+
 .. toctree::
         :maxdepth: 2
            
@@ -19,10 +20,11 @@ Energy Monitor User Guide
        03-00-01-Saving-the-changes.md
 
 .. toctree::
-           :maxdepth: 2
+        :maxdepth: 2
        04-00-00-User-manual/04-01-00-Configuration-overview.md
+       04-00-00-User-manual/04-01-01-Adding-Hosts.md
        04-00-00-User-manual/04-02-00-Business-Intelligence.md
 
 .. toctree::
         :maxdepth: 2
-        04-01-01-Adding-Hosts.md
+       04-01-01-Adding-Hosts.md
