@@ -5,30 +5,29 @@ Energy Monitor User Guide
         :maxdepth: 2
         :caption: Contents
 
-
-                01-00-00-About/01-00-00-About
-                01-00-00-About/01-00-01-table-of-contents
-                01-00-00-About/01-00-02-Overview
-                02-00-00-Install/02-00-01-Installation.
-                03-00-00-Getting-started/03-00-01-Getting-started
+        01-00-00-About/01-00-00-About
+        01-00-00-About/01-00-01-table-of-contents
+        01-00-00-About/01-00-02-Overview
+        02-00-00-Install/02-00-01-Installation.
+        03-00-00-Getting-started/03-00-01-Getting-started
 
 .. toctree::
         :maxdepth: 2
            
-       02-00-00-Install/02-00-01-Installation.md
+        02-00-00-Install/02-00-01-Installation.md
 
 .. toctree::
         :maxdepth: 2
-       03-00-00-Getting-started/                        
-       03-00-00-Getting-started/03-00-01-Getting-started.md/
-       03-00-00-Getting-started/03-00-01-Saving-the-changes.md
+        03-00-00-Getting-started/                        
+        03-00-00-Getting-started/03-00-01-Getting-started.md/
+        03-00-00-Getting-started/03-00-01-Saving-the-changes.md
        
 .. toctree::
         :maxdepth: 2
-       04-00-00-User-manual/04-01-00-Configuration-overview.md
-       04-00-00-User-manual/04-01-01-Adding-Hosts.md
-       04-00-00-User-manual/04-02-00-Business-Intelligence.md
+        04-00-00-User-manual/04-01-00-Configuration-overview.md
+        04-00-00-User-manual/04-01-01-Adding-Hosts.md
+        04-00-00-User-manual/04-02-00-Business-Intelligence.md
 
 .. toctree::
         :maxdepth: 2
-       04-01-01-Adding-Hosts.md
+        04-01-01-Adding-Hosts.md
