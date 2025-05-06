@@ -1,3 +1,6 @@
+Operations on Hosts
+===================
+
 .. toctree::
    :maxdepth: 1
 
