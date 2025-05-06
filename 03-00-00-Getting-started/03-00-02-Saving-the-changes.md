@@ -1,4 +1,4 @@
-# Saving the changes into the database
+## Saving the changes into the database
 
 - In order to save any changes the user makes into the database for LogMonitor to recognize, after inputting changes, the user must enter "Save" menu on the right side of the UI, then press "write changes to the database" button. 
 
