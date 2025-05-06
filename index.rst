@@ -1,5 +1,6 @@
 .. toctree::
    :maxdepth: 2
+   :contents: Table-of-Contents
 
    01-00-00-About/index
    02-00-00-Install/index
