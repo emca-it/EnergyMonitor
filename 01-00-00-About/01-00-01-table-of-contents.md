@@ -2,8 +2,6 @@
 
 ## About
 
-test
-
 ## Overview
 
 ### Monitoring Objects
