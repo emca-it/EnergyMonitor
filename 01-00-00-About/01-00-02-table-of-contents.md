@@ -1,13 +1,8 @@
 # Table of contents:
 
-<details>
-
-<summary>
 ## About
-</summary>
-## Overview
 
-</details>
+## Overview
 
 ### Monitoring Objects
 
