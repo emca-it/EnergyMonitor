@@ -5,9 +5,9 @@ Energy Monitor User Guide
         :maxdepth: 2
         :caption: Contents
 
-        01-00-00-About/01-00-00-About
-        01-00-00-About/01-00-01-table-of-contents
-        01-00-00-About/01-00-02-Overview
+        01-00-00-About/01-00-01-About
+        01-00-00-About/01-00-02-table-of-contents
+        01-00-00-About/01-00-03-Overview
         
         
 .. toctree::
@@ -29,7 +29,4 @@ Energy Monitor User Guide
         04-00-00-User-manual/04-01-01-Adding-Hosts
         04-00-00-User-manual/04-02-00-Business-Intelligence
 
-.. toctree::
-        :maxdepth: 2
 
-        04-00-00-User-manual/ 04-01-01-Adding-Hosts
