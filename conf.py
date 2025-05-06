@@ -21,7 +21,7 @@ release = 'latest'
 exclude_patterns = ['_build']
 pygments_style = 'sphinx'
 htmlhelp_basename = 'energymonitor'
-html_theme = 'furo'
+html_theme = 'sphinx-book-theme'
 file_insertion_enabled = False
 latex_documents = [
   ('index', 'energymonitor.tex', u'Energy Monitor Documentation',
