@@ -9,13 +9,13 @@
 ![Adding_hosts](/media/03-00-02_Adding_hosts_2.png)
 ![Adding_hosts](/media/03-00-02_Adding_hosts_3.png)
 
-- Default Template (For regular, non-server endpoints generic-host will suffice)
+    - Default Template (For regular, non-server endpoints generic-host will suffice)
 
-- Ip Address
+    - Ip Address
 
-- Hostname
+    - Hostname
 
-- File where this entry is meant to be saved
+    - File where this entry is meant to be saved
 
 ## 3. **Confirm with "Add Services"**
 
