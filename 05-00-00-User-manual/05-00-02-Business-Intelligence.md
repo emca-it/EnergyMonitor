@@ -1,4 +1,4 @@
-## Business Intelligence (BI)
+# Business Intelligence (BI)
 
 ### Overview
 
