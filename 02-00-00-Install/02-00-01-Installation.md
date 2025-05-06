@@ -1,6 +1,6 @@
 # Installation and System Requirements 
 
-## System requiments
+## System requirements
 
 ### Supported Operating Systems
 
