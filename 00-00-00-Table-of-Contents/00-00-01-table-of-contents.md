@@ -1,4 +1,4 @@
-# Table of contents:
+# Table of contents
 
 ## About
 
@@ -26,9 +26,4 @@
 
 ### Configuration
 
-## User Manual
-
 ### Adding Hosts
-
-
-

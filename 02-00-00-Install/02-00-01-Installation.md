@@ -1,4 +1,4 @@
-# Installation and System Requirements 
+# Installation and System Requirements
 
 ## System requirements
 
@@ -40,10 +40,9 @@ Installation need access to below repo.
 
 The Energy Monitor installer is delivered as tarball `energy-monitor-{product_version}.tar.gz`
 
-
 The Energy Monitor comes with simple installation script called `install.sh`. It is designed to facilitate the installation and deployment process of out product. After running(execute) the script, it will detect supported distribution. The script is located in the `energy-monitor` directory.
 
-#### Installation steps
+### Installation steps
 
 1. Untar the archive containing installer \
     `tar xf energy-monitor-{product_verison}.tar.gz`
@@ -58,6 +57,6 @@ During this process you will be asked to confirm that you want to install Energy
 
 If everything went correctly, you should be able to login to GUI with default credentials provided at the end of installation process.
 
-GUI will be avaiable at `https://IP_address` of the machine it was installed on. 
+GUI will be avaiable at `https://IP_address` of the machine it was installed on.
 
 ![login_page](/media/00_01_login_page.png)
