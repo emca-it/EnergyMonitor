@@ -11,7 +11,7 @@ Energy Monitor User Guide
 .. toctree::
         :maxdepth: 2
            
-        02-00-00-Install/02-00-01-Installation
+        02-00-00-Install/index
 
 .. toctree::
         :maxdepth: 2
