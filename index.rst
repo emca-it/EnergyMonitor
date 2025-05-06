@@ -1,10 +1,6 @@
-Table of Contents
-===================
-
 .. toctree::
    :maxdepth: 2
    :caption: Table of Contents
-   :doc:`Full Table of Contents 00-00-00-Table-of-Contents/index`
 
 
    00-00-00-Table-of-Contents/index
