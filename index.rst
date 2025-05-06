@@ -5,18 +5,19 @@ Energy Monitor User Guide
         :maxdepth: 2
         :caption: Contents
 
-        01-00-00-About/index
+        01-00-00-About/table-of-contents
         
 .. toctree::
         :maxdepth: 2
            
-        02-00-00-Install/index
+        02-00-00-Install/installation
 
 .. toctree::
         :maxdepth: 2
 
-        03-00-00-Getting-started/index                       
-        
+        03-00-00-Getting-started/Getting-started
+        03-00-00-Getting-started/saving-the-changes
+        03-00-00-Getting-started/Adding-hosts
        
 .. toctree::
         :maxdepth: 2
