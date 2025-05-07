@@ -1,3 +1,6 @@
+Configuration Manual 
+=====================
+
 .. toctree::
    :maxdepth: 2
 
