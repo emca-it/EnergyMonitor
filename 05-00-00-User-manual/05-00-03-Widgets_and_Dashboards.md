@@ -23,7 +23,7 @@
 
 <blockquote style="border-left: 8px solid cyan; padding: 15px;"> Widgets are predefined, components that allow the user to easily display a particular aspect of current state of EnergyMonitor on a larger interface, ie. a dashboard.
 </blockquote>
-<br></br>
+
 
 ### Adding a widget
 
@@ -36,4 +36,8 @@ By clicking the gear icon the user can specify various parameters of the widget.
 ![dashboard_first_view](/media/05_00_03_04_Widget.png)
 
 ![dashboard_first_view](/media/05_00_03_05_Widget.png)
+
+
+
+
 
