@@ -57,6 +57,6 @@ During this process you will be asked to confirm that you want to install Energy
 
 If everything went correctly, you should be able to login to GUI with default credentials provided at the end of installation process.
 
-GUI will be avaiable at `https://IP_address` of the machine it was installed on.
+GUI will be available at `https://IP_address` of the machine it was installed on.
 
 ![login_page](/media/00_01_login_page.png)

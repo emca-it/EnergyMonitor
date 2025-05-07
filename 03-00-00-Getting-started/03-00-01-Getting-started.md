@@ -1,9 +1,6 @@
+# Basic info
 
-# Getting started
-
-## Basic info
-
-### Log in
+## Log in
 
 To log in to Energy Monitor:
 
@@ -16,7 +13,7 @@ To log in to Energy Monitor:
 Your dashboard is displayed: \
 ![dashboard_after_login](/media/00_02_dashboard_after_login.png)
 
-### Log out
+## Log out
 
 To log out:
 
@@ -25,7 +22,7 @@ To log out:
 
 ![log_out](/media/00_02_logout.png)
 
-### Change you password
+## Change you password
 
 To change password:
 
@@ -34,7 +31,7 @@ To change password:
 1. Click Change password.
 1. Enter your current password and new password then confirm with CHANGE PASSWORD button.
 
-### Get help
+## Get help
 
 You can get help with at Energy Monitor in the follwoing locations:
 
