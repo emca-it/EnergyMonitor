@@ -138,7 +138,7 @@ sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
 
 ## 4. Optional: Configure commands
 
-Nrpe.cfg allows you to set commands, that can be invoked directly from the host's shell. Energy Monitor invokes commands remotely, however if one prefers, there does exist an option to configure all desired metrics locally on the host. This method assumes the administraotr placed the necessary plugins in **/usr/local/nagios/libexec** and chnaged command definitions in **nrpe.cfg**.
+Nrpe.cfg allows you to set commands, that can be invoked directly from the host's shell. Energy Monitor invokes commands remotely, however if one prefers, there does exist an option to configure all desired metrics locally on the host. This method assumes the administraotr placed the necessary plugins in **/usr/local/nagios/libexec** and chnaged command definitions in **nrpe.cfg**. In functionality, it is very similar to an Alias.
 
 > example syntax: command[check_load]=/usr/lib/nagios/plugins/check_load -w 5,4,3 -c 10,8,6
 
@@ -147,3 +147,5 @@ Nrpe.cfg allows you to set commands, that can be invoked directly from the host'
 > **sudo systemctl restart nagios-nrpe-server**  # For Debian/Ubuntu
 <br></br>
 > **sudo systemctl restart nrpe**  # For CentOS/RHEL
+
+
