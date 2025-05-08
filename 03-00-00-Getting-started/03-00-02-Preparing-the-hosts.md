@@ -8,8 +8,9 @@ The steps differ, depending on what operating system it runs on.
 
 <blockquote style="border-left: 8px solid cyan; padding: 15px;"> Administrative priviliges on the host are required to implement the following instructions. 
 </blockquote>
+<br>
 
-1. Energy Monitor utilizies NSClient++ for monitoring Windows based hosts, download it from [NSClient++](https://www.nsclient.org/download/) website and install on the host as shwon on the following screens:
+Energy Monitor utilizes NSClient++ for monitoring Windows based hosts, download it from [NSClient++](https://www.nsclient.org/download/) website and install on the host as shwon on the following screens:
 
 - Choose "**Generic**"
 <br></br>
@@ -33,7 +34,7 @@ Secure Mode utilizes certficates for both, encryption and authentication. Theref
 ![NSC](/media/04_01_nsc_3.png)
 
 
-## Post-Installation steps
+## Configure NSClient++
 
 After the agent has been installed, default path being `C:\ProgramFiles\NSClient++`, it's configuration file, `nsclient.ini` needs to be edited.
 
@@ -111,4 +112,38 @@ level = debug
 
 # Preparing Linux endpoints
 
+## 1. Update and/or install the following packages:
 
+```
+sudo apt update  # For Debian/Ubuntu
+
+sudo yum update  # For CentOS/RHEL
+```
+## 2. Install NRPE and Nagios plugins:
+
+````
+sudo apt install nagios-nrpe-server nagios-plugins  # For Debian/Ubuntu
+
+sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
+````
+
+## 3. Configure NRPE:
+
+
+> Enter NRPE's configuration file, by default in (Oracle, RHEL and the like) **/etc/nagios/nrpe.cfg**, open it with a text editor like vi, nano, vim and such.
+<br></br>
+> Just like in the case of Windows hosts, add the IP address of your mainframe under "**allowed hosts**" directive.
+<br></br> 
+> example syntax: **allowed_hosts=127.0.0.1,ENERGY_MONITOR_SERVER_IP**
+
+## 4. Optional: Configure commands
+
+Nrpe.cfg allows you to set commands, that can be invoked directly from the host's shell. Energy Monitor invokes commands remotely, however if one prefers, there does exist an option to configure all desired metrics locally on the host. This method assumes the administraotr placed the necessary plugins in **/usr/local/nagios/libexec** and chnaged command definitions in **nrpe.cfg**.
+
+> example syntax: command[check_load]=/usr/lib/nagios/plugins/check_load -w 5,4,3 -c 10,8,6
+
+## 5. Restart the nrpe service
+
+> **sudo systemctl restart nagios-nrpe-server**  # For Debian/Ubuntu
+<br></br>
+> **sudo systemctl restart nrpe**  # For CentOS/RHEL
