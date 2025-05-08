@@ -1,4 +1,4 @@
-# Adding Hosts to the database
+# Adding hosts to the database
 
 ## 1. **Enter "Manage" -> Configure -> Hosts**
 
