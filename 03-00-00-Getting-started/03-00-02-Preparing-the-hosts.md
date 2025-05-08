@@ -1,4 +1,4 @@
-# Preparing the hosts for monitoring
+# Preparing hosts for monitoring
 
 Before Energy Monitor can be utilized to monitor an endpoint, it must be pre-configured first. 
 
@@ -108,5 +108,7 @@ level = debug
 **-** Turning on all modules is recommended for futureproofing. 
 
 **-** Allow arguments option is crucial, because it allows arguments to be passed in the queries to the agent, which results in specific metrics, tuned in to company needs. 
+
+# Preparing Linux endpoints
 
 
