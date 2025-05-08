@@ -1,4 +1,4 @@
-# Adding Hosts
+# Adding Hosts to the database
 
 ## 1. **Enter "Manage" -> Configure -> Hosts**
 
@@ -23,5 +23,5 @@
 
 ## 4. **Confirm adding host with "Finish"**
 
-<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Note</b>: Buckets give the user a capacity of adding multiple services at once, during the creation of a host. So if many identical services are used on multiple hosts, setting a bucket up can make setting up a host much easier. One should of it as a template, essentially.
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Note</b>: Buckets give the user a capacity of adding multiple services at once, during the creation of a host. So if many identical services are used on multiple hosts, setting a bucket up can make setting up a host much easier. One should of it as several metrics/services bundled together.
 </blockquote>
