@@ -19,3 +19,6 @@
 - After successful saving, the user will see the following confirmation.
 
 ![database_changes_saved](/media/03-00-04_database_changes_saved.png)
+
+<blockquote style="border-left: 8px solid green; padding: 15px;"> <b>Note</b>: Keep in mind that a user needs <strong>"export permissions"</strong> to save changes.
+</blockquote>
