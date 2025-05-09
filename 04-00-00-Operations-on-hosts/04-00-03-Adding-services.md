@@ -14,7 +14,7 @@ In order to add a service to a host:
 ![Adding_hosts](/media/04_00_03_main_menu_2.png)
 
 3. Specify the service parameters
-
+<br></br>
 Parameters include:
 ````
 - Service description
@@ -39,4 +39,14 @@ Parameters include:
 
 <br>
 Later, you can check your syntax with <strong>Test This Check</strong> button and see if the metric returns proper data. You will be informed about any errors with their specifc details, as the plugin logs them.
+<br></br>
+Example:
+
+> The administrator might define the metric paraemters with a custom named variables. As shown in the following images, supplying raw parameters or custom variables yields the same results. Additional help regarding custom variables can be found under "**?**" sign next to the "**Custom variable**" field.
+
+![Adding_hosts](/media/04_00_03_main_menu_4.png)
+![Adding_hosts](/media/04_00_03_main_menu_5.png)
+![Adding_hosts](/media/04_00_03_main_menu_6.png)
 </blockquote>
+
+
