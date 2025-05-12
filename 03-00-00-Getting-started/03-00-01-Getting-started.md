@@ -52,3 +52,8 @@ After log in to Energy Monitor your default dashboard is displayed:
 |3.|Dashboard options| For configure and share dashboard|
 |4.|Search bar|For searching through monitoring objects|
 |5.|Quick Links| For adding shourtcuts to frequently used reports and viwes|
+
+
+
+
+
