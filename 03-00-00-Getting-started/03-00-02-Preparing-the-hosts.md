@@ -1,5 +1,4 @@
-Preparing hosts for monitoring
-===============================
+# Preparing hosts for monitoring
 
 Before Energy Monitor can be utilized to monitor an endpoint, it must be pre-configured first. 
 
@@ -35,7 +34,7 @@ Secure Mode utilizes certficates for both, encryption and authentication. Theref
 ![NSC](/media/04_01_nsc_3.png)
 
 
-## Configure NSClient++
+### Configure NSClient++
 
 After the agent has been installed, default path being `C:\ProgramFiles\NSClient++`, it's configuration file, `nsclient.ini` needs to be edited.
 
@@ -111,16 +110,16 @@ level = debug
 
 **-** Allow arguments option is crucial, because it allows arguments to be passed in the queries to the agent, which results in specific metrics, tuned in to company needs. 
 
-# Preparing Linux endpoints
+## Preparing Linux endpoints
 
-## 1. Update and/or install the following packages:
+### 1. Update and/or install the following packages:
 
 ```
 sudo apt update  # For Debian/Ubuntu
 
 sudo yum update  # For CentOS/RHEL
 ```
-## 2. Install NRPE and Nagios plugins:
+### 2. Install NRPE and Nagios plugins:
 
 ````
 sudo apt install nagios-nrpe-server nagios-plugins  # For Debian/Ubuntu
@@ -128,7 +127,7 @@ sudo apt install nagios-nrpe-server nagios-plugins  # For Debian/Ubuntu
 sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
 ````
 
-## 3. Configure NRPE:
+### 3. Configure NRPE:
 
 
 > Enter NRPE's configuration file, by default in (Oracle, RHEL and the like) **/etc/nagios/nrpe.cfg**, open it with a text editor like vi, nano, vim and such.
@@ -137,13 +136,13 @@ sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
 <br></br> 
 > example syntax: **allowed_hosts=127.0.0.1,ENERGY_MONITOR_SERVER_IP**
 
-## 4. Optional: Configure commands
+### 4. Optional: Configure commands
 
 >Nrpe.cfg allows you to set commands, that can be invoked directly from the host's shell. Energy Monitor invokes commands remotely, however if one prefers, there does exist an option to configure all desired metrics locally on the host. This method assumes the administraotr placed the necessary plugins in **/usr/local/nagios/libexec** and chnaged command definitions in **nrpe.cfg**. In functionality, it is very similar to an Alias.
 
 > example syntax: command[check_load]=/usr/lib/nagios/plugins/check_load -w 5,4,3 -c 10,8,6
 
-## 5. Restart the nrpe service
+### 5. Restart the nrpe service
 
 > **sudo systemctl restart nagios-nrpe-server**  # For Debian/Ubuntu
 <br></br>
