@@ -1,4 +1,5 @@
-# Preparing hosts for monitoring
+Preparing hosts for monitoring
+===============================
 
 Before Energy Monitor can be utilized to monitor an endpoint, it must be pre-configured first. 
 
