@@ -1,10 +1,12 @@
-# Adding Contacts/Services/Hosts to Groups
+# Adding Hosts to Groups
 
 Energy Monitor supports the use of groups, which allow multiple hosts, services or contacts to be brought to together as 1 entry. 
 
-Practical example, would be a situation where a company has a 100 Windows hosts, IT department has decided and configured the services and metrics to be monitored on those endpoints and now, instead of adding those metrics a 100 times, one host at a time, they can be added to a servicegroup and 100 windows endpoints to a host group. 
+- Practical example, would be a situation where a company has a 100 Windows hosts, IT department has decided to sort them into groups for ease and convenience.
 
-In the end, all IT department would have to do is assign the hosts to the host group and a servicegroup to hte hostgroup. 
+- Any changes to various parameters, like implementing metrics, can be controlled from the level of a group. 
+
+- **Changes in a group, affect all hosts that are within it.** 
 
 ## Adding Hosts to groups
 
