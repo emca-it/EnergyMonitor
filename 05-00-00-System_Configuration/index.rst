@@ -7,3 +7,7 @@ Configuration Manual
    05-00-03-Widgets_and_Dashboards
    05-00-04-Downtimes
    05-00-05-Notification_Setup
+   05-00-06-Adding_Hostgroups_Groups
+   05-00-07-Adding_Contacts_Groups
+   05-00-08-Adding_Servicegroups_Groups
+   05-00-09-Bulk_Configuration
