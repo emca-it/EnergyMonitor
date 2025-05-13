@@ -51,7 +51,7 @@ This method involves essentially copying/pasting an existing metric on a host an
 
 ![downtime](/media/05_00_06_06_bulk_configuration.png)
 
-4. Pick which entries you wish to modify
+4. Pick which entries you wish to modify:
 
 ![downtime](/media/05_00_06_07_bulk_configuration.png)
 
@@ -91,7 +91,7 @@ This method involves creating a hostgroup, adding hosts to it then cloning servi
 
 The pros is that it requires setting up once, then as new hosts appear, they can be added simply to the hostgroup, no need to configure on the level of the host itself.
 
-The caveat, however is that this works brlliantly for metrics/services that never change. Any change to the metric assigned to the hsotgroup, affects all hosts within it.
+The caveat, however is that this works brlliantly for metrics/services that never change. Any change to the metric assigned to the hostgroup, affects all hosts within it.
 
 For instance: You monitor CPU_LOAD with a warning threshold of 50%. But you have 1 host where you would like to have it at 30%. You would need to add a separate entry for this metric, on the host itself, essentially leaving you with 2 metrics measuring the same thing but with different notification parameters. 
 
