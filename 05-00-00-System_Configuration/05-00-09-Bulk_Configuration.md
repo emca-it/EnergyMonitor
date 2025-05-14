@@ -19,9 +19,9 @@ Possible targets of the following operations are:
     - Services in the following servicegroups
     - Services
 <br></br>
-- A note worthy mention is the **Copy** option, which creates a new host that is identical to the one being copied, same groups, same notificat ion settings but with removed hostname.
+- A note worthy mention is the **Copy** option, which creates a new host that is identical to the one being copied, same groups, same notification settings etc. just with removed hostname.
 <br></br>
-- Useful if you set up 1 host and simply want to create X more with the only things changing like IP address and hostname. 
+- Useful if you set up 1 host as a base and simply want to create X more with only few settings changing between them.  
 
 
 ## Method 1: Propagate
