@@ -11,3 +11,6 @@ Configuration Manual
    05-00-07-Adding_Contacts_Groups
    05-00-08-Adding_Servicegroups_Groups
    05-00-09-Bulk_Configuration
+   05-00-10-Configuration_files
+   05-00-11-Scheduler
+   05-00-12-Buckets
