@@ -75,3 +75,74 @@ This type of BI group is configured to always report a fixed status—OK, WARNIN
 - Fixed UNKNOWN:  The group always returns an unknown status, indicating that the actual state cannot be determined or is not applicable.
 
 This configuration is ideal for testing, overriding dynamic calculations, or maintaining consistent reporting in specific scenarios.
+
+
+## Setup
+
+In order to set up Business Intelligence the following must be done:
+
+1. Enter "**Monitor**" -> "**Business Intelligence**":
+
+![BI](/media/05_00_02_01_Business_Intelligence.png)
+
+2. Create a group, consisting of objects of your preference with "**Create a New Group**" button
+
+Available options include:
+
+    -   Groups
+
+    -   Hostgroups
+
+    -   Servicegroups
+    
+    -   Hosts
+
+    -   Services
+
+Groups can be set as "**Primary Group**", this causes the group, as the name implies, to be the 1st in hierarchy. In the main window, such a group would be on the highest level. Although, there is no technical restriction to add 1 primary group under another primary one. 
+
+In order to add 1 group into another, the following must be done:
+
+-   Create the 2nd group, this one will be under the primary one. Pick objects of your preferrence, set up a name under "**Display Name**".
+
+-   Create the 1st group and under "**Group Members**" pick your 2nd group.
+
+-   Save the changes wit the "**Save**" button.
+
+
+During creation of a group, few optional parameters can be chosen:
+
+-  "**[Essential Member](#essential-member)**"
+
+-   "**Deploy as a Service**"
+
+    -   This option will create a service on the chosen host, specified under the "**Host**" field. 
+
+    -   This service will be visible under the "**View**" button.
+
+-   "**Primary Group**"    
+
+
+![BI](/media/05_00_02_02_Business_Intelligence.png)
+
+![BI](/media/05_00_02_03_Business_Intelligence.png)
+
+![BI](/media/05_00_02_04_Business_Intelligence.png)
+
+<blockquote style="border-left: 8px solid orange; padding: 15px;"> <b>Note</b>: 
+States in BI are the same as when using thresholds and notifications from the host main menu. The same logic applies. 
+</blockquote>
+
+
+![BI](/media/05_00_02_05_Business_Intelligence.png)
+
+![BI](/media/05_00_02_06_Business_Intelligence.png)
+
+Tick the "**checkboxes**" next to the menu You wish to hide, then save the settings with "**Save New Settings**" button.
+
+<blockquote style="border-left: 8px solid orange; padding: 15px;"> <b>Note</b>: 
+It doesn't restrict access rights of the group in any capacity. 
+</blockquote>
+<br>
+
+
