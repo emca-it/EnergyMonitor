@@ -66,7 +66,7 @@ Energy Monitor's "**View Active Config**" is a straightforward menu allowing the
 - Icon image alt
 
 <blockquote style="border-left: 8px solid orange; padding: 15px;"> 
-For instance, the company has a basic configuration for a switch, an administrator might want to set up a template to include that base config in every switch that will be added into the system, removing a lot of repetetive work. 
+For instance, if the company has a basic configuration for a switch, an administrator might want to set up a template to include that base config in every switch that will be added into the system, removing a lot of repetetive work. 
 </blockquote>
 
 

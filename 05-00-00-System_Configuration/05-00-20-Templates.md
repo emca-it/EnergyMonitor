@@ -2,7 +2,7 @@
 
 Templates allow you to set a blueprint for a particular type of hosts or services. 
 
-For instance, the company has a basic configuration for a switch, the administrator might want to set up a template to include that base config in every switch that will be added into the system, removing a lot of repetetive work. 
+For instance, the company has a basic configuration for every swtich it uses, the administrator wants to set up a template to include that base config in every switch that will be added into the system, removing a lot of repetetive work. 
 
 ## Setting up a template
 

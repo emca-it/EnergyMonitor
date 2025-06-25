@@ -18,3 +18,16 @@ Hovering the mouse over an option will display an explanation of the category.
 ![group_rights](/media/05_00_17_03_group_rights.png)
 
 2. After finishing, save the changes to the database.
+
+## Adding a new group 
+
+To add a new group, simply input it's name, check the boxes to define what rights the group should have and "**Save**".
+
+![group_rights](/media/05_00_17_05_group_rights.png)
+
+<blockquote style="border-left: 8px solid red; padding: 15px;"> <b>Note</b>: 
+Keep in mind that if permissions of a group change, affected users mut logout and login again for Energy Monitor to read the permissions anew.
+</blockquote>
+<br>
+
+![group_rights](/media/05_00_17_06_group_rights.png)
