@@ -30,6 +30,6 @@ Configuration Manual
    05-00-24-Performance_Process_Information
    05-00-25-Retention
    05-00-26-My_Account_options
-   05-00-27-Network_Outages.md
+   05-00-27-Network_Outages
    05-00-28-Integration_with_Discord
    
