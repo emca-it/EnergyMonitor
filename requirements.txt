@@ -2,3 +2,4 @@ sphinx-tabs
 myst-parser
 recommonmark
 sphinx-rtd-theme
+sphinx_rtd_size
