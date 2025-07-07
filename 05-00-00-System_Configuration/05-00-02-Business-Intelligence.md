@@ -36,6 +36,34 @@ For example, if a group's warning threshold is set to 2 and the critical thresho
 
 These thresholds allow for flexible monitoring tailored to the infrastructure's specifics, enabling early detection of potential problems and the implementation of appropriate corrective actions.
 
+The underlying logic behind the thresholds is as follows:
+
+**"Best state"** is calculated by:
+
+```
+warning threshold = amount of members in a group -1
+critical threshold = amount of members in a group -1
+```
+"**Worst state**" is calculated by:
+```
+warning threshold = 1
+critical threshold = 1
+```
+
+To clarify with a example, let's assume we have 10 hosts and 1 of them experiences a malfunction of sorts.
+
+-    Critical Threshold
+
+    -   would occur if number of members with a critical state were to be bigger than a threshold.      
+
+-    Warning Threshold
+
+    -   would occur if number of members with a warning state were to be bigger than a threshold. 
+
+-   Best State will take those 9 hosts working properly and display "Ok" status. 
+
+-   Worst State will take that 1 host with a malfunction and display let's say "Critical" state. 
+
 _Additional Information: Check [Essential Member](#essential-member)_
 
 #### Scores
