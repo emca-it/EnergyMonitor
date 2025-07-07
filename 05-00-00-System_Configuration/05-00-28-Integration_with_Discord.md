@@ -105,16 +105,16 @@ def main():
     }
 
     state_emojis = {
-        "OK": "✅",
-        "UP": "✅",
-        "DOWN": "❌",
-        "CRITICAL": "❌",
-        "WARNING": "⚠️",
-        "UNKNOWN": "❓"
+        "OK": "[**]",
+        "UP": "[*]",
+        "DOWN": "[!!!]",
+        "CRITICAL": "[!!]",
+        "WARNING": "[!]",
+        "UNKNOWN": "[?]"
     }
 
     host_state_color = state_colors.get(args.hoststate, 0xA9A9A9)
-    host_state_emoji = state_emojis.get(args.hoststate, "❓")
+    host_state_emoji = state_emojis.get(args.hoststate, "[?]")
 
     # Create title based on host description
     title = f"{host_state_emoji} {args.hostname} is {args.hoststate}! {host_state_emoji}"
@@ -233,16 +233,16 @@ def main():
     }
 
     state_emojis = {
-        "OK": "✅",
-        "UP": "✅",
-        "DOWN": "❌",
-        "CRITICAL": "❌",
-        "WARNING": "⚠️",
-        "UNKNOWN": "❓"
+        "OK": "[**]",
+        "UP": "[*]",
+        "DOWN": "[!!!]",
+        "CRITICAL": "[!!]",
+        "WARNING": "[!]",
+        "UNKNOWN": "[?]"
     }
 
     service_state_color = state_colors.get(args.servicestate, 0xA9A9A9)
-    service_state_emoji = state_emojis.get(args.servicestate, "❓")
+    service_state_emoji = state_emojis.get(args.servicestate, "[?]")
 
     # Create title based on service state and host/service description
     title = f"{service_state_emoji} {args.servicedesc} on {args.hostname} is {args.servicestate}! {service_state_emoji}"
