@@ -122,7 +122,7 @@ sudo yum update  # For CentOS/RHEL
 ### 2. Install NRPE and Nagios plugins:
 
 ````
-sudo apt install nagios-nrpe-server nagios-plugins  # For Debian/Ubuntu
+sudo apt install nagios-nrpe-server nagios-monitoring-plugins  # For Debian/Ubuntu
 
 sudo yum install nrpe nagios-plugins-all  # For CentOS/RHEL
 ````
