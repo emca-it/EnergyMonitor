@@ -26,7 +26,12 @@ It is recommended to create a "dummy host" which will house all such metrics, fo
 
 Energy Monitor also has buckets which contain services with a suffix of "**(automatic)**".
 
-The "**Automatic**" natureof these buckets comes do to the fact that they are pre-defined services that unlike a regular service, which points to 1 object, ie. a C drive on Windows and reads some sort of data on it, an automatic service points to all drives in that Windows system. 
+The "**Automatic**" nature of these buckets comes do to the fact that they are pre-defined services that unlike a regular service, which points to 1 object, ie. a C drive on Windows and reads some sort of data on it, an automatic service points to all drives in that Windows system. 
+
+<blockquote style="border-left: 8px solid red; padding: 15px;"> <b>Note</b>: 
+<b>These automatic metrics if modified, will stop working.</b> 
+</blockquote>
+<br></br>
 
 ![Buckets](/media/05_00_12_02_Buckets.png)
 

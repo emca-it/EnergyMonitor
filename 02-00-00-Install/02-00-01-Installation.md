@@ -27,7 +27,7 @@
 ### Hardware Requirements
 
 - The following hardware requirements assume the default check intervals of 5 minutes.
-
+<br></br>
 -   If extensive logging is required in the environment, it is advisable to utilize 2 server, clustered environment. 
 
 
