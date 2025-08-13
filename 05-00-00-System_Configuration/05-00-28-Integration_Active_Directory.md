@@ -6,7 +6,7 @@ Energy Monitor allows for logging in with the Active Directory user database, by
 
 While Energy Monitor assigns chosen group permissions, it integrates with an Active Directory account to obtain data regarding available users and groups.
 
-This is why we need a dedicated Active Directory account.
+Energy Monitor binds with a service account in the Active Directory to get access to user information and group memberships. Therefore you need to create a service account for the Energy Monitor in your domain.
 
 -   Create the Account/s
 <br></br>
