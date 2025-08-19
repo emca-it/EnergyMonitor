@@ -70,7 +70,6 @@ You can also set these up from GUI, from the following windows in the host confi
 
 ## Reachability Logic
 
-
 ![ParentChild](/media/05_00_29_02_Parent_Child.png)
 
 Let's assume that Router 1 and Web Server experience malfunction and enter DOWN state.

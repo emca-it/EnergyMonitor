@@ -33,3 +33,4 @@ Configuration Manual
    05-00-27-Network_Outages
    05-00-28-Integration_Active_Directory
    05-00-29-Parent_Child_Relations
+   05-00-30-Check_Types
