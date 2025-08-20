@@ -82,23 +82,49 @@ Installation need access to below repo.
 
 The Energy Monitor installer is delivered as tarball `energy-monitor-{product_version}.tar.gz`
 
-The Energy Monitor comes with simple installation script called `install.sh`. It is designed to facilitate the installation and deployment process of out product. After running(execute) the script, it will detect supported distribution. The script is located in the `energy-monitor` directory.
+The Energy Monitor comes with simple installation script called `install.sh`. It is designed to facilitate the installation and deployment process of our product. After running(execute) the script, it will detect supported distribution. The script is located in the `energy-monitor` directory.
 
 ### Installation steps
 
-1. Untar the archive containing installer \
-    `tar xf energy-monitor-{product_verison}.tar.gz`
-1. Copy license file to extracted directory \
-    `cp monitor_*.* energy-monitor/`
-1. Go to the extracted directory \
-    `cd energy-monitor`
-1. Run installation script with installation flag \
+1. Untar the archive containing installer 
+    `tar -xvf energy-monitor-{product_verison}.tar.gz`
+
+2. Go to the extracted directory 
+    `cd ./energy-monitor`
+
+3. Run installation script with installation flag 
     `./install.sh -i` or `./install.sh install`
 
-During this process you will be asked to confirm that you want to install Energy Monitor on your system.
+-   If you are upgrading from a lower version, please use "**-u**"  or "**upgrade**" parameter instead.
+
+![login_page](/media/02_00_02_login_page.png)
+![login_page](/media/02_00_03_login_page.png)
+
+
+Follow the onscreen prompts. During this process you will be asked to confirm that you want to install Energy Monitor on your system.
 
 If everything went correctly, you should be able to login to GUI with default credentials provided at the end of installation process.
 
+By default, admin login is:
+
+```
+login: admin
+password: admin
+```
+
 GUI will be available at `https://IP_address` of the machine it was installed on.
 
-![login_page](/media/00_01_login_page.png)
+<blockquote style="border-left: 8px solid orange; padding: 15px;"> <b>Note</b>: 
+Energy Monitor works only on https. Attempting to connect via http will result in error. 
+</blockquote>
+
+
+4. Copy license file to /etc/energy-monitor-license directory 
+
+![Licence](/media/02_00_02_Licence_01.png)
+
+
+![login_page](/media/02_00_01_login_page.png)
+
+
+
